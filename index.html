@@ -1,79 +1,165 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-    <head>
-        <meta charset="utf-8"/>
-        <title>primer pagina web</title>
-        <meta name="descripcion de mi sitio web" content="Esta es mi primer pagina web"/>
-        <meta name="autor" content="YO"/>
-        <meta name="keyword" content="palabras que comunmente uses en la paguina"/>
-        <link rel="stylesheet" href="estilos.css" />
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>First page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
 
-    <body>
+<body>
 
-        <div class="agrupar">
-                <header class="laminas">
-                    <h1>Mi Blog</h1>
-                </header>
-            
-                    <nav class="menu">
-                        <ul>
-                            <li>Principal</li>
-                            <li>Ayuda</li>
-                            <li>Contacto</li>
-                        </ul>
-                    </nav>
-            
-                    <section class="seccion">
-                        <article>
-                            <hgroup>
-                                <h1>Titulo del primer articulo</h1>
-                                <h2>Subtitulo del Primer articulo</h2>
-                            </hgroup>
-                            <time datetime="08-12-2019">Publicado 08-12-2019</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex minima. Eaque officiis totam saepe minima, voluptas, nihil consequatur aspernatur sint maiores nemo ipsa animi molestiae accusamus! Quisquam, repudiandae assumenda.</p>
-                            <img src="image/Zenitsu Gritando.jpg" width="200" height="200" />
-                            <footer>
-                                <p>Comentarios (0)</p>
-                            </footer>
-                            <address>
-                                <a href="http://faztweb.com">clic para vicitar la pagina de faztweb</a>
-                            </address>
-                        </article>
-                        
-                        <article>
-                            <hgroup>
-                                <h1>Titulo del segundo articulo</h1>
-                                <h2>Subtitulo del segundo articulo</h2>
-                            </hgroup>
-                            <time datetime="08-12-2019">Publicado 08-12-2019</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias,quam! Dolore soluta ipsa non reprehenderit deserunt, laborum neque illum quasi hic asperiores ratione, dolores quam nobis, amet alias vero molestiae!</p>
-                            <footer>
-                                <p>Comentarios (5)</p>
-                            </footer>
-                            <address>
-                                <a href="https://www.google.com">Visita Google</a>
-                            </address>
-                        </article>
-                </section>
-        
-                <aside class="columna">
-                    <blockquote cite="http://www.unapagina.cl">
-                        Mensaje 1
-                    </blockquote>
-        
-                    <blockquote  cite="http://www.unapagina.cl">
-                        Mensaje 2
-                    </blockquote>
-                </aside>
-        
-                <footer class="pie">
-                    Derechos recervados 2010-2019.
-                    <script src="app.js"></script>
-                </footer>
-        </div>
+    <div class="grid__layout">
 
-    </body>
+        <header class="grid__layout--header header__container">
+            <h1 class="header__title">My Blog</h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__list-item">Home</li>
+                    <li class="header__list-item">Help</li>
+                    <li class="header__list-item">Contact</li>
+                </ul>
+            </nav>
+
+            <label class="toggle_label" for="toggle">
+                <img class="icon" src="/image/menu_icon.svg" alt="menu_icon">
+            </label>
+            <input class="header__toggle-menu" type="checkbox" hidden name="toggle" id="toggle">
+            <nav class="header__mobile-nav">
+                <ul class="header__list">
+                    <li class="header__list-item">Home</li>
+                    <li class="header__list-item">Help</li>
+                    <li class="header__list-item">Contact</li>
+                    <li class="header__list-item">
+                        <a class="mobile__link" href="https://twitter.com/AndresKoczan">
+                        X.com
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="mobile__link" href="https://www.linkedin.com/in/thomas-andres-koczan-orellana-7a4968269/">
+                            Linkedin
+                        </a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="mobile__link" href="https://github.com/ThomasA98">
+                            Github
+                        </a>
+                    </li>
+                    <p>
+                        This page has been rebuilt. If you want to watch the original version you can go to the <a class="link--github" href="https://github.com/ThomasA98/mi_primera_web">Github repository</a> and look the first commit.
+                    </p>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="grid__layout--main">
+            <section class="blog__list">
+
+                <article class="blog__list-item">
+                    <time class="blog__date-publication" datetime="08-12-2019">Public on 08-12-2019</time>
+                    <div class="blog__item-content">
+                        <hgroup class="blog__title-group">
+                            <h1 class="blog__title">Title first article</h1>
+                            <h2 class="blog__subtitle">Subtitle of first article</h2>
+                        </hgroup>
+                        <p class="blog--text-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex minima. Eaque officiis
+                            totam saepe minima, voluptas, nihil consequatur aspernatur sint maiores nemo ipsa animi
+                            molestiae accusamus! Quisquam, repudiandae assumenda.
+                        </p>
+                        <div class="blog__footer">
+                            <span>comments (0)</span>
+                            <a class="blog__a" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <img class="blog__img" src="image/Zenitsu Gritando.jpg" />
+                </article>
+
+                <article class="blog__list-item">
+                    <time class="blog__date-publication" datetime="08-12-2019">Public on 08-12-2019</time>
+                    <div class="blog__item-content">
+                        <hgroup class="blog__title-group">
+                            <h1 class="blog__title">Title first article</h1>
+                            <h2 class="blog__subtitle">Subtitle of first article</h2>
+                        </hgroup>
+                        <p class="blog--text-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex minima. Eaque officiis
+                            totam saepe minima, voluptas, nihil consequatur aspernatur sint maiores nemo ipsa animi
+                            molestiae accusamus! Quisquam, repudiandae assumenda.
+                        </p>
+                        <div class="blog__footer">
+                            <span>comments (0)</span>
+                            <a class="blog__a" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <img class="blog__img" src="image/Zenitsu Gritando.jpg" />
+                </article>
+
+                <article class="blog__list-item">
+                    <time class="blog__date-publication" datetime="08-12-2019">Public on 08-12-2019</time>
+                    <div class="blog__item-content">
+                        <hgroup class="blog__title-group">
+                            <h1 class="blog__title">Title first article</h1>
+                            <h2 class="blog__subtitle">Subtitle of first article</h2>
+                        </hgroup>
+                        <p class="blog--text-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex minima. Eaque officiis
+                            totam saepe minima, voluptas, nihil consequatur aspernatur sint maiores nemo ipsa animi
+                            molestiae accusamus! Quisquam, repudiandae assumenda.
+                        </p>
+                        <div class="blog__footer">
+                            <span>comments (0)</span>
+                            <a class="blog__a" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <img class="blog__img" src="image/Zenitsu Gritando.jpg" />
+                </article>
+
+                <article class="blog__list-item">
+                    <time class="blog__date-publication" datetime="08-12-2019">Public on 08-12-2019</time>
+                    <div class="blog__item-content">
+                        <hgroup class="blog__title-group">
+                            <h1 class="blog__title">Title first article</h1>
+                            <h2 class="blog__subtitle">Subtitle of first article</h2>
+                        </hgroup>
+                        <p class="blog--text-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex minima. Eaque officiis
+                            totam saepe minima, voluptas, nihil consequatur aspernatur sint maiores nemo ipsa animi
+                            molestiae accusamus! Quisquam, repudiandae assumenda.
+                        </p>
+                        <div class="blog__footer">
+                            <span>comments (0)</span>
+                            <a class="blog__a" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <img class="blog__img" src="image/Zenitsu Gritando.jpg" />
+                </article>
+
+            </section>
+        </main>
+
+        <aside class="grid__layout--aside aside__container">
+            <a class="aside__link" href="https://twitter.com/AndresKoczan">
+                X.com
+            </a>
+            <a class="aside__link" href="https://www.linkedin.com/in/thomas-andres-koczan-orellana-7a4968269/">
+                Linkedin
+            </a>
+            <a class="aside__link" href="https://github.com/ThomasA98">
+                Github
+            </a>
+
+            <p>
+                This page has been rebuilt. If you want to watch the original version you can go to the Github repository and look the first commit.
+            </p>
+        </aside>
+
+        <footer class="grid__layout--footer footer__container">
+            <a class="footer__link" href="https://github.com/ThomasA98/mi_primera_web">Repo on github</a>
+        </footer>
+    </div>
+
+</body>
 
 </html>

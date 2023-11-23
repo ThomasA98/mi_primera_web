@@ -1,0 +1,12 @@
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--primary-color);
+    text-shadow: 0 0 1rem currentColor;
+    font-size: 1.5rem;
+}

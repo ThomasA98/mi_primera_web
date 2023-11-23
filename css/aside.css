@@ -1,0 +1,16 @@
+.aside__container {
+    margin-top: var(--spacer-m);
+    margin-right: var(--spacer-m);
+    flex-direction: column;
+    gap: var(--spacer-m);
+}
+
+.aside__link {
+    background-color: var(--dark-color);
+    border-radius: 15px;
+    padding: 1rem .5rem;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
